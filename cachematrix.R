@@ -52,6 +52,8 @@ cacheSolve <- function(x, ...) {
     iMatrix <- x$get()
     outInverse <- solve(iMatrix)
     x$setinverse(outInverse)
-  } 
+  } else {
+    message("Returning cached data...")
+  }
   outInverse
 }
